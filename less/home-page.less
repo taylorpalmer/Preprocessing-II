@@ -6,6 +6,12 @@ body {
       justify-content: space-between;
       padding: 2% 10%;
       border-bottom: 2px dashed @navigation-border;
+
+      @media @mobile {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
     }
 
     img {
@@ -30,14 +36,28 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 80%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 80%;
+      }
 
       img {
         border-radius: 10px;
@@ -48,6 +68,12 @@ body {
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -74,10 +100,23 @@ body {
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    text-align: center;
+
+    @media @mobile {
+      width: 70%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 15%;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+      }
 
       p {
         margin-bottom: 2%;
